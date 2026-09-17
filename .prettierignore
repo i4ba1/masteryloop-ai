@@ -1,0 +1,10 @@
+pnpm-lock.yaml
+node_modules
+.next
+test-results
+playwright-report
+*.pdf
+supabase/.temp
+packages/infrastructure/src/db/database.types.ts
+
+.bootstrap/

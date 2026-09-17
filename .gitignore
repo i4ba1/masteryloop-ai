@@ -1,0 +1,16 @@
+node_modules/
+.next/
+dist/
+coverage/
+playwright-report/
+test-results/
+.env*
+!.env.example
+.pnpm-store/
+.supabase/
+supabase/.temp/
+supabase/.branches/
+*.tsbuildinfo
+.tools/
+
+.bootstrap/

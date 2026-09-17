@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-15T22:50:29.100Z",
+  "sourceCopy": "D:\\nodejs-development\\masteryloop_ai\\.bootstrap\\run-1789512395025",
+  "dependencyDownloadsExcluded": true,
+  "setupSeconds": 205,
+  "within30Minutes": true,
+  "steps": [
+    {
+      "label": "Frozen dependency install",
+      "seconds": 20,
+      "passed": true
+    },
+    {
+      "label": "Start isolated local database",
+      "seconds": 51,
+      "passed": true
+    },
+    {
+      "label": "Reset isolated local database",
+      "seconds": 43,
+      "passed": true
+    },
+    {
+      "label": "Configure local environments",
+      "seconds": 5,
+      "passed": true
+    },
+    {
+      "label": "Provision synthetic roles",
+      "seconds": 7,
+      "passed": true
+    },
+    {
+      "label": "Generated database types",
+      "seconds": 10,
+      "passed": true
+    },
+    {
+      "label": "Database authorization tests",
+      "seconds": 7,
+      "passed": true
+    },
+    {
+      "label": "Deno package check",
+      "seconds": 5,
+      "passed": true
+    },
+    {
+      "label": "Deno compatibility tests",
+      "seconds": 5,
+      "passed": true
+    },
+    {
+      "label": "Authenticated worker health and denial",
+      "passed": true
+    },
+    {
+      "label": "Four role browser dashboards",
+      "seconds": 63,
+      "passed": true
+    },
+    {
+      "label": "Stop isolated database",
+      "seconds": 9,
+      "passed": true
+    }
+  ],
+  "failure": null
+}

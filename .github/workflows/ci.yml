@@ -1,0 +1,38 @@
+name: Foundation CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.22.3
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm lint
+      - run: pnpm architecture
+      - run: pnpm test
+      - run: pnpm exec supabase start > /tmp/masteryloop-start.log 2>&1
+      - run: pnpm setup:local && pnpm seed:local
+      - run: pnpm db:types:check
+      - run: pnpm test:rls
+      - run: pnpm typecheck
+      - run: pnpm build && pnpm check:bundle
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm test:e2e
+      - run: pnpm audit --audit-level high
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: browser-test-report
+          path: playwright-report/
+      - if: always()
+        run: pnpm exec supabase stop

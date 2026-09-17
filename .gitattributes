@@ -1,0 +1,14 @@
+# Keep text files LF-normalized in the repository and working tree on every OS.
+* text=auto eol=lf
+
+# Binary inputs and generated media must never be line-ending converted.
+*.pdf binary
+*.png binary
+*.gif binary
+*.mp4 binary
+*.webm binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.woff binary
+*.woff2 binary

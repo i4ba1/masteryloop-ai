@@ -1,0 +1,19 @@
+{
+  "nodeModulesDir": "none",
+  "imports": {
+    "@masteryloop/domain": "../../../packages/domain/src/index.ts",
+    "@masteryloop/application": "../../../packages/application/src/index.ts",
+    "@masteryloop/contracts": "../../../packages/contracts/src/index.ts",
+    "zod": "npm:zod@4.3.6"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "lib": ["deno.ns", "dom", "dom.iterable", "es2022"]
+  },
+  "tasks": {
+    "check": "deno check index.ts ../_shared/compatibility_test.ts",
+    "test": "deno test ../_shared/compatibility_test.ts"
+  }
+}
