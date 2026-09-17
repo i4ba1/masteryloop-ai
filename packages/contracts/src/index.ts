@@ -56,3 +56,29 @@ export const updateAccountSchema = accountDetailsSchema.extend({
   active: z.boolean(),
   reason: z.string().trim().min(5).max(500),
 });
+
+export const gradingResultSchema = z
+  .object({
+    schemaVersion: z.literal("1.0"),
+    score: z.number().finite().nonnegative(),
+    maxScore: z.number().finite().positive(),
+    confidence: z.number().finite().min(0).max(1),
+    criteria: z
+      .array(
+        z
+          .object({
+            criterionId: z.string().min(1).max(100),
+            awarded: z.number().finite().nonnegative(),
+            possible: z.number().finite().positive(),
+            met: z.boolean(),
+            evidence: z.string().max(1000),
+          })
+          .strict(),
+      )
+      .max(50),
+    misconceptions: z.array(z.string().max(300)).max(20),
+    studentFeedback: z.string().min(1).max(2000),
+    reviewFlags: z.array(z.string().max(100)).max(20),
+  })
+  .strict();
+export type GradingResultContract = z.infer<typeof gradingResultSchema>;

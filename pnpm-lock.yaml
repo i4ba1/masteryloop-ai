@@ -130,6 +130,9 @@ importers:
       '@masteryloop/application':
         specifier: workspace:*
         version: link:../application
+      '@masteryloop/contracts':
+        specifier: workspace:*
+        version: link:../contracts
       '@masteryloop/domain':
         specifier: workspace:*
         version: link:../domain

@@ -12,6 +12,7 @@
   "dependencies": {
     "@masteryloop/domain": "workspace:*",
     "@masteryloop/application": "workspace:*",
+    "@masteryloop/contracts": "workspace:*",
     "@supabase/supabase-js": "2.116.0"
   }
 }

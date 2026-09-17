@@ -2,9 +2,11 @@
 
 Source: `MasteryLoop_AI_Technical_PRD_v1.1.pdf`, version 1.1, 14 September 2026, 47 pages.
 
-Updated: 16 September 2026. The workspace now contains a Next.js/pnpm foundation, shared packages, Supabase authentication and roster migration/RLS tests, synthetic seed tooling, role dashboards, and CI. The original checklist was not updated alongside that implementation. Unchecked items may therefore be partially implemented; they remain open until their full acceptance criteria have recorded verification.
+Updated: 17 September 2026. The workspace now contains a Next.js/pnpm foundation, shared packages, Supabase authentication and roster migration/RLS tests, synthetic seed tooling, role dashboards, and CI. The original checklist was not updated alongside that implementation. Unchecked items may therefore be partially implemented; they remain open until their full acceptance criteria have recorded verification.
 
-### Latest development evidence (15 September 2026)
+### Latest development evidence (17 September 2026)
+
+- AI grading foundation started: added rubric-bound domain validation and conservative review routing, a provider-neutral application port/use case, strict output contract, and an OpenAI Responses API adapter using schema-constrained JSON and non-stored responses. Automated unit tests cover score/evidence validation, review triggers, and mocked provider behavior. Durable homework persistence, queue/worker execution, teacher review actions, and publication are still open; the AI adapter is not connected to student workflows yet.
 
 - W1-06/W1-07/W1-16/W1-17: keyset pagination, account administration, Deno compatibility, and bootstrap verification are implemented and evidenced below.
 - W1-13: added transitive client-to-server import detection to the existing architecture gate. It follows runtime imports and re-exports, rejects server-only markers and server runtime imports, ignores erased type references, and respects module-level server-action boundaries. Regression fixtures cover prohibited imports, valid inward dependencies, server actions, cycles, and the current workspace.

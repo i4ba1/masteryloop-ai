@@ -1,8 +1,10 @@
 # MasteryLoop AI
 
-MasteryLoop AI is a focused Science homework platform for primary-school students, teachers, parents, and school administrators. It turns everyday homework into traceable concept-level learning evidence while keeping teacher authority, authorization, reproducibility, and safe failure at the centre.
+MasteryLoop AI is an AI-assisted Science homework grading and student mastery platform with human teacher review. It is designed to help teachers assess open-ended homework against consistent rubrics, surface uncertain results for teacher judgment, and turn published outcomes into traceable concept-level learning evidence.
 
-The current release is the runnable foundation: authenticated role workspaces, organization-scoped Supabase RLS, class and roster administration, guardian links, cursor pagination, audited account administration, accessible UI states, Deno worker compatibility, and a recorded Playwright walkthrough. Homework authoring, asynchronous AI grading, teacher review, mastery calculations, and production operations are the next product slices.
+The product serves primary-school students, teachers, parents, and school administrators. Teacher authority, student privacy, reproducibility, and safe failure are central: AI supports grading, while teachers retain control over uncertain decisions and publication.
+
+The current release is the runnable foundation: authenticated role workspaces, organization-scoped Supabase RLS, class and roster administration, guardian links, cursor pagination, audited account administration, accessible UI states, Deno worker compatibility, and a recorded Playwright walkthrough. Homework authoring, asynchronous AI grading, teacher review, and mastery calculations are planned product features; the current worker health endpoint does not grade answers yet.
 
 ## Demo Walkthrough
 
